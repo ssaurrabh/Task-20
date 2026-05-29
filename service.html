@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box1">
+            <nav>
+                <img src="download (1).jfif" alt="logo">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+
+                    <div class="user">
+                        <h3>Username</h3>
+                    </div>
+                    <div class="nav-cont">
+                        <button id="ham">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="nav-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <section id="services">
+            <div class="left1">
+                <h4>Added Items</h4>
+                <div class="itemtable">
+                    <table id="itemtab">
+                        <tr>
+                            <td>S. No.</td>
+                            <td>Service Name</td>
+                            <td>Price</td>
+                        </tr>
+                        
+
+                    </table>
+                </div>
+                <div class="total">
+                    <div class="finaltotal">
+                        <div id="emptydata">
+                            <i class="fa-solid fa-anchor-circle-exclamation"></i><br>
+                            <p>No Item Added</p>
+                        </div>
+                        <div class="amountdetail">
+                            <h4>Total Amount</h4>
+                            <p><i class="fa-solid fa-indian-rupee-sign"></i><span id="amountdis"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- <p><i class="fa-solid fa-indian-rupee-sign"></i><span></span></p> -->
+                </div>
+                <div class="bookingdetails">
+                    <h4>Book Now</h4>
+                    <input type="text" id="name" class="inpa" placeholder="Enter Your Name"><br>
+                    <div class="boxe">
+                        <div class="details">
+                            <label for="email">Email</label><br>
+                            <input type="email" name="email" id="email" class="inp" placeholder="Enter Email">
+                        </div>
+                        <div class="inputa">
+                            <label for="Phone">Phone</label><br>
+                            <input type="number" name="Phone" id="phone" class="inp" placeholder="Enter Phone Number">
+                        </div>
+                    </div>
+                    <button id="booknow" onclick="booknow()">Book Now</button>
+                    <div id="status"></div>
+                </div>
+            </div>
+            <div class="right1">
+                <h3>Browse Our Services</h3>
+                <p>Click on the Add to Cart Button to add the serviceto your cart or press Skip:</p>
+                <hr>
+                <div class="servimage">
+                    <img src="" id="servimage"><br>
+                    <div class="amount">
+                        <span
+                            id="servname">Service Amount</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-indian-rupee-sign"></i><span id="servamount"></span>
+                    </div>
+                </div>
+                <div class="addrem">
+                    <button onclick="skip()" id="skip">Skip Item<i class="fa-regular fa-square-minus"></i></button>
+                    <button onclick="add()" id="add">Add Item<i class="fa-regular fa-square-plus"></i></button>
+                </div>
+                <button onclick="addfinal()" id="finaladd">Add The Items to the cart and Book now</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

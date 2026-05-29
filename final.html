@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Cart Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+          
+            emailjs.init({
+              publicKey: "39HSg-SEhyaejYeNj",
+            });
+        })();
+    </script>
+    
+    <script src="./finalscript.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <nav>
+                <img src="download (1).jfif" alt="logo">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+
+                    <div class="user">
+                        <h3>Username</h3>
+                    </div>
+                    <div class="nav-cont">
+                        <button id="ham">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="nav-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <section id="services">
+            <div class="left1">
+                <h3>Our Services</h3>
+                <p>Click on the Add to Cart Button to add the serviceto your cart or press Skip:</p>
+                <hr>
+                <div class="content">
+                    <dl id="locdl">
+                        <dd id="des"></dd>
+                    </dl>
+                </div>
+                <button onclick="addfinal()" id="finaladd">Add The Items to the cart and Book now</button>
+            </div>
+            <div class="right1">
+                <h4>Added Items</h4>
+                <div class="itemtable">
+                    <table id="itemtab">
+                        <tr>
+                            <th>S. No.</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+
+
+                    </table>
+                </div>
+                <div class="total">
+                    <div class="finaltotal">
+                        <div id="emptydata">
+                            <i class="fa-solid fa-anchor-circle-exclamation"></i><br>
+                            <p>No Item Added</p>
+                        </div>
+                        <div class="amountdetail">
+                            <h4>Total Amount</h4>
+                            <p><i class="fa-solid fa-indian-rupee-sign"></i><span id="amountdis"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- <p><i class="fa-solid fa-indian-rupee-sign"></i><span></span></p> -->
+                </div>
+                <div class="bookingdetails">
+                    <h4>Book Now</h4>
+                    <input type="text" id="name" class="inpa" placeholder="Enter Your Name" required><br>
+                    <div class="boxe">
+                        <div class="details">
+                            <label for="email">Email</label><br>
+                            <input type="email" name="email" id="email" class="inp" placeholder="Enter Email" required>
+                        </div>
+                        <div class="inputa">
+                            <label for="Phone">Phone</label><br>
+                            <input type="number" name="Phone" id="phone" class="inp" placeholder="Enter Phone Number"
+                                maxlength=10 required>
+                        </div>
+                    </div>
+                    <button id="booknow" onclick="booknow()">Book Now</button>
+                    <div id="status"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="qualitydes">
+            <div class="box1">
+                <i class="fa-regular fa-gem"></i>
+                <h4>Premium Services</h4>
+                <p>we offer Premium services all through the working area as define and want you to try for it for once
+                    and we hope you will continue to order for a long time</p>
+            </div>
+            <div class="box2">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h4>Quick Support</h4>
+                <p>Our expert customer calling team is available between 08.00 am to 10.00 pm for all your product and
+                    service related help</p>
+            </div>
+            <div class="box3">
+                <i class="fa-regular fa-truck"></i>
+                <h4>Hassle Free Delivery</h4>
+                <p>We have a dedicated team to delivery your product within stipulated time and with proper care</p>
+            </div>
+            <div class="box4">
+                <i class="fa-regular fa-handshake"></i>
+                <h4>Affordable Prices</h4>
+                <p>The prices that we offer and nowhere to be found as we are firmly commited to deliver best of our
+                    services with an affordable price in the market</p>
+            </div>
+        </section>
+        <section id="newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <div class="input">
+                <input type="text" id="inpnews" placeholder="Enter Your Name">
+                <input type="email" id="inpmail" placeholder="Enter Email"><br>
+                <input type="submit" id="newsbtn">
+            </div>
+        </section>
+
+        <footer class="foot">
+            <div class="log">
+                <div>
+                    <img src="./download (1).jfif" alt="logo">
+                </div>
+                <h5>About Us</h5>
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, veniam?</span>
+            </div>
+            <div class="imp">
+                <h5>Important Links</h5>
+                <a href="#">About Us</a><br>
+                <a href="#">Contact Us</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms of Use</a><br>
+                <a href="#">Refund Policy</a><br>
+            </div>
+            <div class="cont">
+                <h5>Contact</h5>
+                <span>info@email.com</span><br>
+                <span>+91-9412456789</span>
+            </div>
+            <div class="follow">
+                <h5>Follow Us</h5>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-google-plus-g"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+
+</html>
